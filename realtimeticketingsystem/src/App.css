@@ -1,0 +1,431 @@
+/* Root variables for light brown color theme */
+:root {
+  --primary-color: #8e735b; /* Light Brown */
+  --secondary-color: #f1c27d; /* Soft Beige */
+  --bg-color: #f4f1ec; /* Very Light Beige */
+  --form-bg-color: #f8f3e1; /* Light Neutral Background for Form */
+  --card-bg-color: #ffffff; /* White for Cards */
+  --text-color: #3e2a47; /* Dark Brown for Text */
+  --heading-color: #f3eae5; /* Darker Brown for headings */
+  --heading3-color: #3a2e27;
+  --button-color: #c89776; /* Medium Brown for Button */
+  --button-hover-color: #5a3b2f; /* Darker Brown for Hover */
+  --border-radius: 8px; /* Border Radius for rounded edges */
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  --font-family: 'Arial', sans-serif;
+  --font-weight: 400;
+  --line-height: 1.6;
+}
+
+/* Basic Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+  background-color: var(--bg-color);
+  background-image: linear-gradient(rgba(80, 80, 50, 0.6), rgba(80, 80, 50, 0.6)), url('img6.jpg');
+  background-size: cover; /* Ensures the image covers the entire screen */
+  background-position: center center; /* Centers the background image */
+  background-attachment: fixed; /* Keeps the background fixed during scrolling */
+  color: var(--text-color);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: var(--heading-color);
+  font-size: 36px;
+  margin-bottom: 50px; /* Increased margin for more space */
+}
+
+h2 {
+  color: var(--heading-color);
+  font-size: 20px;
+  margin-bottom: 20px; /* Increased margin for more space */
+}
+
+h3{
+  color: var(--heading3-color);
+  font-size: 20px;
+  margin-bottom: 20px; /* Increased margin for more space */
+
+}
+
+/* Form Styles */
+form {
+  background-color: var(--form-bg-color); /* Light neutral background for form */
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  max-width: 600px;
+  margin: 0 auto 40px auto; /* Increased bottom margin for more space */
+}
+
+label {
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 25px;
+  border-radius: var(--border-radius);
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+button {
+  background-color: var(--button-color);
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  width: 30%;
+  transition: background-color 0.3s ease;
+  margin-top: 15px; /* Increased top margin between buttons */
+  display: block; /* Make button a block-level element */
+  margin-left: auto; /* Automatically adjust the left margin */
+  margin-right: auto; /* Automatically adjust the right margin */
+}
+
+button:hover {
+  background-color: var(--button-hover-color);
+}
+
+/* Ticket Status Section (Form-like background) */
+.ticket-status {
+  background-color: var(--form-bg-color);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-top: 60px; /* Increased margin for  space */
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ticket-status h2 {
+
+  margin-bottom: 25px;
+}
+
+.ticket-status p {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* Container for Ticket Status */
+.ticket-status-container {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: var(--form-bg-color);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+}
+
+.ticket-status-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--heading3-color);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Cards for status */
+.ticket-status-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.status-card {
+
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  width: 48%; /* Ensures the cards take up half the width */
+  padding: 20px;
+  text-align: center;
+}
+
+.status-card-title {
+  font-size: 18px;
+  font-weight: 500;
+  color: #6d4c41; /* Matching dark brown for labels */
+  margin-bottom: 10px;
+}
+
+.status-card-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: #3e2723; /* Darker shade for the actual value */
+}
+
+.status-card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.2s ease-in-out;
+}
+
+.status-card:active {
+  transform: translateY(2px);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .ticket-status-cards {
+    flex-direction: column;
+  }
+
+  .status-card {
+    width: 100%;
+  }
+}
+
+/* styling for the ticket page */
+.ticket-page {
+  padding: 20px;
+  text-align: center;
+}
+
+.ticket-page h1 {
+  font-size: 24px;
+  color: var(--heading-color);
+  margin-bottom: 40px;
+}
+
+/* styles for managing customers and vendors */
+.main-section {
+  margin: 20px auto;
+}
+
+.customer-vendor {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.tile {
+  background-color: var(--form-bg-color);
+  padding: 40px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  width: 45%;
+  min-width: 300px;
+}
+
+/* Customer and Vendor Tile Headers */
+.customer-tile h2, .vendor-tile h2 {
+  color: #6d4c41;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+/* Input field styles */
+.input-field {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  margin-bottom: 15px;
+  width: 80%;
+}
+
+/* Add button for customer and vendor */
+.count-button {
+  background-color: var(--button-color);
+  color: white;
+  font-size: 14px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.count-button:hover {
+  background-color: var(--button-hover-color);
+}
+
+/* List of names for customers and vendors */
+.name-list {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.name-item {
+  font-size: 16px;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+/*Styles for LogDisplay*/
+
+
+
+  .tile {
+    width: 100%;
+    padding: 20px; /* Reduced padding on smaller screens for better fit */
+  }
+
+  .control-button {
+    width: 100%;
+    padding: 12px;
+  }
+
+
+
+.log-container {
+  background-color: var(--form-bg-color);
+  padding: 20px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  margin-top: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.log-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--heading3-color);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.log-list {
+  list-style-type: none;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  padding: 10px;
+  background-color: var(--card-bg-color);
+}
+
+.log-entry {
+  font-size: 14px;
+  color: var(--text-color);
+  margin-bottom: 5px;
+}
+
+.log-actions {
+  display: flex;
+  justify-content: center; /* Center aligns the buttons */
+  gap: 20px; /* Adds space between the buttons */
+  margin-top: 20px;
+}
+
+.log-actions button {
+  padding: 10px 20px;
+  background-color: var(--button-color);
+  color: #fff;
+  font-size: 14px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.log-actions button:hover {
+  background-color: var(--button-hover-color);
+}
+
+.status-message {
+  font-size: 16px; /* Slightly larger font for visibility */
+  color: #ff0000; /* Bright red text */
+  font-weight: bold;
+  text-align: center;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  form {
+    width: 100%;
+    padding: 15px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  input[type="number"] {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+
+  /* src/components/TicketPage.css */
+  .ticket-page {
+    padding: 20px;
+  }
+
+  .input-section input {
+    margin: 5px;
+    padding: 5px;
+  }
+
+  .button-section button {
+    padding: 10px 20px;
+    margin: 10px;
+  }
+
+  .ticket-status p {
+    font-size: 16px;
+  }
+
+  .ticket-activity button {
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+}
